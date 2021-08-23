@@ -1,0 +1,23 @@
+<div class="smowlcheckreg_block">
+	<div id="Div2">
+		{% if has_settings %}
+			<img src="https://media.smowltech.net/images/smowltech100.png">
+			<br><br>
+			<B id="test">SMOWL REGISTER CHECK</B>
+			<br><br>
+			<form id='resultadoo' method='POST' target="tarsmo-{{location}}" action='{{SMOWLCHECKREG_URL}}'> 
+				<input type="hidden" name="entity_Name" value="{{entity_Name}}" />
+				<input type="hidden" name="swlLicenseKey" value="{{swlLicenseKey}}" />
+				<input type="hidden" name="type" value="2" />
+				<input type="hidden" name="anombres" value={{nombresAlum}} />
+				<input type="hidden" name="lang" value="en" />
+				<input type="hidden" name="edx" value="1" />
+			</form>
+
+			<iframe id="tarsmo-{{location}}" name="tarsmo-{{location}}" width="105%" src="#" frameborder="0" style="margin-left: -20px; min-height: 500px; height: auto;" allowfullscreen></iframe>
+		{% else %}
+		<p>La configuración interna del componente <strong>no se ha configurado correctamente</strong>.</p>
+		<p>Contáctese con mesa de ayuda <strong><a href="/contact_form">presionando aquí</a></strong>.</p>
+		{% endif %}
+	</div>
+</div>

@@ -1,0 +1,1 @@
+from .smowlcheckreg import IframeWithAnonymousIDXBlock
