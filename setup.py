@@ -32,7 +32,7 @@ setup(
     ],
     entry_points={
         'xblock.v1': [
-            'smowlcheckreg = smowlcheckreg:IframeWithAnonymousIDXBlock',
+            'smowlcheckreg = smowlcheckreg:SmowlCheckRegXblock',
         ],
         "lms.djangoapp": [
             "smowlcheckreg = smowlcheckreg.apps:SmowlCheckRegConfig",

@@ -40,7 +40,7 @@ import logging
 log = logging.getLogger(__name__)
 
 
-class IframeWithAnonymousIDXBlock(XBlock):
+class SmowlCheckRegXblock(XBlock):
     """
     XBlock displaying an iframe, with an anonymous ID passed in argument
     """
@@ -90,7 +90,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
         frag.add_content(render_template(
             '/templates/html/smowlcheckreg-author.html', context))
         frag.add_css(self.resource_string("static/css/smowlcheckreg.css"))
-        frag.initialize_js('IframeWithAnonymousIDXBlock')
+        frag.initialize_js('SmowlCheckRegXblock')
         return frag
 
     def student_view(self, context=None):
@@ -100,7 +100,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
         """
 
         #runtime = TestRuntime(services={'field-data': DictFieldData({})})
-        #block = IframeWithAnonymousIDXBlock(runtime, scope_ids=Mock(spec=ScopeIds))
+        #block = SmowlCheckRegXblock(runtime, scope_ids=Mock(spec=ScopeIds))
         #parent = block.get_parent()
 
         #url_response = self.request.GET
@@ -177,7 +177,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
         frag.add_css(self.resource_string("static/css/smowlcheckreg.css"))
         frag.add_javascript(self.resource_string(
             "static/js/src/smowlcheckreg.js"))
-        frag.initialize_js('IframeWithAnonymousIDXBlock', json_args=settings)
+        frag.initialize_js('SmowlCheckRegXblock', json_args=settings)
         return frag
 
     def studio_view(self, context=None):
@@ -189,7 +189,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
             '/templates/html/smowlcheckreg-edit.html'))
         frag.add_javascript(self.resource_string(
             "static/js/src/smowlcheckreg-edit.js"))
-        frag.initialize_js('IframeWithAnonymousIDXBlock')
+        frag.initialize_js('SmowlCheckRegXblock')
         return frag
 
     def check_settings(self):
@@ -205,7 +205,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
     def workbench_scenarios():
         """A canned scenario for display in the workbench."""
         return [
-            ("IframeWithAnonymousIDXBlock",
+            ("SmowlCheckRegXblock",
              """
 			 """),
         ]

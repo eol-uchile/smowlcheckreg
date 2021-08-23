@@ -1,5 +1,5 @@
 /* Javascript for SMOWLCHECKREGISTER*/
-function IframeWithAnonymousIDXBlock(runtime, element, settings) {
+function SmowlCheckRegXblock(runtime, element, settings) {
     $(function ($) {
         if (settings.has_settings){
             var resultadoo = $(element).find('#resultadoo')[0];
